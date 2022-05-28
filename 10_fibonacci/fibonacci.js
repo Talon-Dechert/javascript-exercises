@@ -13,11 +13,9 @@ const fibonacci = function(num) {
         prev = curr;
     }
 
-    console.log(curr);
     return curr;
 };
 
-fibonacci(8);
 
 // Do not edit below this line
 module.exports = fibonacci;
