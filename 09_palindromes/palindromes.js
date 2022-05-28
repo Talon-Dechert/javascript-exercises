@@ -2,21 +2,26 @@ const palindromes = function (words) {
 
     //* Setting up comparable arrays
     words = words.toLowerCase();
+
+    //* Remove punctuation and spaces
+
     let wordsArray = words.split('');
+    wordsArray = wordsArray.filter(char => (char >= 'a') && (char <= 'z'));
+
+    //* Set up array in reverse
     let reverseArray = [];
-
-    //! Need to remove punctuation and spaces
-
     wordsArray.forEach(element => reverseArray.push(element));
-
     reverseArray.reverse();
 
-    //! Now to compare arrays - most likely through a forEach comparison
+    //* Now to compare arrays
 
+    for (i = 0; i < wordsArray.length; i++){
+        if (wordsArray[i] != reverseArray[i]) return false;
+        else return true;
+    };
 
 };
 
-palindromes('A car, a man, a maraca.');
 
 // Do not edit below this line
 module.exports = palindromes;
