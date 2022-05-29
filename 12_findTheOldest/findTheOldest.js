@@ -15,9 +15,7 @@ const findTheOldest = function(objArr) {
             older = curr;
         };
 
-        let oldest = older;
-
-        return oldest;
+        return older;
     }, {name: "nobody", age: 1})
 };
 
